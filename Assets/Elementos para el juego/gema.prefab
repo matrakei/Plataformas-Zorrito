@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ac76bfccc01d740b003034bdb41aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prizeAmount: 0
+  value: 0
   fxFeedback: {fileID: 26071784483681875, guid: 6ed26b1294907594cbaddebb0f67aa82,
     type: 3}
+  Pick: {fileID: 8300000, guid: d5e1084570681d7438f6146756108fd6, type: 3}

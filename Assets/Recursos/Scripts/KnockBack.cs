@@ -9,6 +9,7 @@ public class KnockBack : MonoBehaviour
     [SerializeField]private float knockBackDuration;
     [SerializeField]private float knockBackForce;
     [SerializeField]private object obj;
+    public AudioClip Hurt;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class KnockBack : MonoBehaviour
     public void ActivateKnockBack(Transform obj)
     {
         StartCoroutine(IKnockBack(knockBackDuration, knockBackForce, obj));
+        SoundManager.Instance.PlaySound(Hurt);
     }
     IEnumerator IKnockBack(float duration, float power, Transform obj)
     {

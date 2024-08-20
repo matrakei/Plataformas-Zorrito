@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
     [SerializeField] Animator anim;
+    public AudioClip JumpSound;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             anim.SetBool("IsJumping", true);
+            SoundManager.Instance.PlaySound(JumpSound);
         }
 
         if (Input.GetAxisRaw("Vertical") < 0)

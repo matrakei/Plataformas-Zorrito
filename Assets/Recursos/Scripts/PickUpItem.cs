@@ -6,6 +6,7 @@ public class PickUpItem : MonoBehaviour
 {
     [SerializeField] int value;
     [SerializeField] GameObject fxFeedback;
+    public AudioClip Pick;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +32,6 @@ public class PickUpItem : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(fxFeedback,gameObject.transform.position,Quaternion.identity);
+        SoundManager.Instance.PlaySound(Pick);
     }    
 }
