@@ -28,7 +28,6 @@ public class SoundManager : MonoBehaviour
     }
     public void PlaySound(AudioClip clip)
     {
-        SFXsource.clip = clip;
         SFXsource.PlayOneShot(clip);
     }
     // Update is called once per frame

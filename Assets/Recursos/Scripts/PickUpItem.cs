@@ -25,13 +25,14 @@ public class PickUpItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PickedUpBehavior();
+            GameManager.Instance.SumarPuntos(1);
+            SoundManager.Instance.PlaySound(Pick);
         }
     }
 
     void PickedUpBehavior()
     {
         Destroy(gameObject);
-        Instantiate(fxFeedback,gameObject.transform.position,Quaternion.identity);
-        SoundManager.Instance.PlaySound(Pick);
+        Instantiate(fxFeedback,gameObject.transform.position,Quaternion.identity);        
     }    
 }
