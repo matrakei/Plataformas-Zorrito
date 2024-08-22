@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     private float cantidadPuntos = 0;
     string escenaActual;
 
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -55,8 +54,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(scene);
         escenaActual = scene;
     }
-
-
-
-
 }
